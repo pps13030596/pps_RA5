@@ -1,5 +1,3 @@
-//pipeline commit
-
 pipeline {
     agent any
     stages {
