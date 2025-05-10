@@ -2,7 +2,7 @@ import unittest
 from io import StringIO
 from unittest.mock import patch
 
-from .calculadora import calculadora
+from pps_RA5.Jenkins.calculadora import calculadora
 
 class TestCalculadora(unittest.TestCase):
     def test_suma(self):
