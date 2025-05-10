@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Checkout") {
             steps {
-                git url: 'https://github.com/pps13030596/pps_RA5/Jenkins/Calculadora'
+                git url: 'https://github.com/pps13030596/calculadora'
             }
         }
     }
