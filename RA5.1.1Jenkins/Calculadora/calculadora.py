@@ -1,3 +1,5 @@
+from operaciones import suma, resta, multiplicacion, division
+
 def calculadora():
     print("Calculadora Básica en Python")
     print("Selecciona una operación:")
@@ -18,23 +20,24 @@ def calculadora():
             num2 = float(input("Ingresa el segundo número: "))
 
             if opcion == 1:
-                resultado = num1 + num2
+                resultado = suma(num1, num2)
                 print(f"Resultado: {num1} + {num2} = {resultado}")
             elif opcion == 2:
-                resultado = num1 - num2
+                resultado = resta(num1, num2)
                 print(f"Resultado: {num1} - {num2} = {resultado}")
             elif opcion == 3:
-                resultado = num1 * num2
+                resultado = multiplicacion(num1, num2)
                 print(f"Resultado: {num1} * {num2} = {resultado}")
             elif opcion == 4:
-                if num2 != 0:
-                    resultado = num1 / num2
+                try:
+                    resultado = division(num1, num2)
                     print(f"Resultado: {num1} / {num2} = {resultado}")
-                else:
-                    print("Error: No se puede dividir entre cero.")
+                except ZeroDivisionError as e:
+                    print(e)
             else:
                 print("Opción no válida. Por favor selecciona una opción del 1 al 5.")
         except ValueError:
             print("Error: Por favor ingresa un número válido.")
 
-calculadora()
+if __name__ == "__main__":
+    calculadora()
