@@ -1,0 +1,37 @@
+FROM jenkins/jenkins:2.504.1-jdk21
+
+# Cambia a usuario root para tener permisos completos
+USER root
+
+# Instalación de Docker CLI, Python y utilidades necesarias
+RUN apt-get update && apt-get install -y \
+    lsb-release \
+    ca-certificates \
+    curl \
+    python3 \
+    python3-pip \
+    python3-venv \
+    && install -m 0755 -d /etc/apt/keyrings \
+    && curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc \
+    && chmod a+r /etc/apt/keyrings/docker.asc \
+    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] \
+    https://download.docker.com/linux/debian $(. /etc/os-release && echo \"$VERSION_CODENAME\") stable" \
+    | tee /etc/apt/sources.list.d/docker.list > /dev/null \
+    && apt-get update \
+    && apt-get install -y docker-ce-cli \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Crear un entorno virtual para evitar problemas con PEP 668
+RUN python3 -m venv /opt/venv \
+    && /opt/venv/bin/pip install --upgrade pip setuptools wheel \
+    && /opt/venv/bin/pip install unittest2
+
+# Asegura que el entorno virtual esté en el PATH
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Vuelve al usuario jenkins para mayor seguridad
+USER jenkins
+
+# Instalación de plugins de Jenkins
+RUN jenkins-plugin-cli --plugins "blueocean docker-workflow json-path-api"
