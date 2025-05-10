@@ -1,10 +1,9 @@
 pipeline {
     agent any
-
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/pps13030596/calculadora.git'
+                git url: 'https://github.com/pps13030596/calculadora', branch: "main"
             }
         }
         stage('Unit Test') {
