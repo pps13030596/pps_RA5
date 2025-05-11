@@ -125,5 +125,12 @@ pipeline {
 - Si Jenkins está en Docker, asegúrate de que el puerto **8080** esté correctamente expuesto.  
 - Usa **ngrok** o **Cloudflare Tunnel** para exponer tu Jenkins a Internet si es necesario.  
 
-## Capturas
+## Capturas del Ejercicio
+
+![](./Imagenes/2025-05-11%2010_07_57-U24042-250222-PPS%20(Instantánea%201%20pre%20jenkins)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/2025-05-11%2010_33_27-U24042-250222-PPS%20(Instantánea%201%20pre%20jenkins)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/2025-05-11%2010_41_00-U24042-250222-PPS%20(Instantánea%201%20pre%20jenkins)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/2025-05-11%2010_55_25-U24042-250222-PPS%20(Instantánea%201%20pregrock)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/2025-05-11%2011_15_11-U24042-250222-PPS%20(Instantánea%201%20pregrock)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/ngrok.png)
 
