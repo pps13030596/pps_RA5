@@ -1,0 +1,17 @@
+---
+- name: Configurar servidor Ubuntu con Apache
+  hosts: web
+  become: yes
+  tasks:
+    - name: Actualizar la cache de paquetes
+      apt:
+        update_cache: yes
+
+    - name: Actualizar el sistema
+      apt:
+        upgrade: dist
+
+    - name: Instalar Apache
+      apt:
+        name: apache2
+        state: present
