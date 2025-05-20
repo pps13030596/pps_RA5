@@ -1,0 +1,22 @@
+---
+- name: Configurar index.html y verificar Apache
+  hosts: web
+  become: yes
+  tasks:
+    - name: Crear archivo index.html
+      copy:
+        dest: /var/www/html/index.html
+        content: "Ansible rocks"
+
+    - name: Reiniciar Apache
+      service:
+        name: apache2
+        state: restarted
+
+    - name: Verificar contenido de la web
+      command: curl http://localhost
+      register: web_output
+
+    - name: Mostrar resultado
+      debug:
+        var: web_output.stdout
