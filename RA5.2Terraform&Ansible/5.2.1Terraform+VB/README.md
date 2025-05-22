@@ -43,27 +43,33 @@ terraform-vm/
 
 ## Código del archivo `main.tf`
 
-```hcl
-terraform {
-  required_providers {
-    vagrant = {
-      source  = "bmatcuk/vagrant"
-      version = ">= 0.1.0"
-    }
+```
+resource "null_resource" "vagrant_vm" {
+  provisioner "local-exec" {
+    command = "vagrant up"
   }
-}
 
-provider "vagrant" {}
-
-resource "vagrant_vm" "ubuntu_vm" {
-  name = "ubuntu2404"
-  box  = "ubuntu/jammy64"  # Ubuntu 22.04 LTS
-
-  memory = 1024
-  cpus   = 1
+  triggers = {
+    always_run = "${timestamp()}"
+  }
 }
 ```
 
+## Código del archivo `Vagrantfile`
+
+```
+Vagrant.configure("2") do |config|
+  config.vm.box = "hashicorp-education/ubuntu-24-04"
+  config.vm.box_version = "0.1.0"
+
+  config.vm.network "private_network", ip: "192.168.56.10"
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = 2048
+    vb.cpus = 2
+  end
+end
+```
 ---
 
 ## Ejecución de Terraform
@@ -73,6 +79,8 @@ resource "vagrant_vm" "ubuntu_vm" {
 ```bash
 terraform init
 ```
+Captura
+![Terraform init](./Imagenes/terraforminit.png)
 
 ### Aplica la configuración:
 
@@ -81,6 +89,9 @@ terraform apply
 ```
 
 Cuando se te pida confirmación, escribe `yes`.
+
+Captura
+![Terraformapply](./Imagenes/2025-05-22%2022_14_17-Screenshots%20y%202%20más%20pestañas%20-%20Explorador%20de%20archivos.png)
 
 ---
 
@@ -94,6 +105,8 @@ Puedes verificar que la máquina virtual está corriendo:
 ```bash
 vagrant global-status
 ```
+Captura
+![Terraformapply](./Imagenes/2025-05-20%2023_43_20-Greenshot.png)
 
 ---
 
@@ -109,9 +122,3 @@ terraform destroy
 
 - El box utilizado es `ubuntu/jammy64` (Ubuntu 22.04), ya que no hay uno oficial para 24.04 en Vagrant Cloud aún.
 - La configuración con Ansible se realizará en los siguientes pasos.
-
-## Capturas
-
-![]()
-![]()
-![]()
