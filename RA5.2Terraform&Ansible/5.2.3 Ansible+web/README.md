@@ -69,3 +69,7 @@ ansible-playbook -i hosts.ini index_html.yml --ssh-common-args='-o StrictHostKey
 
 - También puedes acceder desde el navegador: [http://192.168.56.10](http://192.168.56.10)
 
+## Captura del resultado
+
+Captura
+![PaginamodificadadesdeAnsible](./Imagenes/2025-05-21%2000_41_35-Greenshot.png)

@@ -81,3 +81,8 @@ ansible-playbook -i hosts.ini setup_apache.yml --ssh-common-args='-o StrictHostK
 ## Nota sobre errores
 
 Durante el proceso pueden aparecer errores relacionados con paquetes como `grub-efi-amd64-signed` o `shim-signed`. Estos errores son esperados en entornos BIOS como VirtualBox y **no afectan el funcionamiento de Apache**.
+
+## Captura del Resultado
+
+Captura:
+![Ansible+apache](./Imagenes/2025-05-21%2000_27_07-Greenshot.png)
