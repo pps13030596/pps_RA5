@@ -19,5 +19,5 @@ data:
         default_backend servers
 
     backend servers
-        server web1 web-0.web.default.svc.cluster.local:80 check
-        server web2 web-1.web.default.svc.cluster.local:80 check
+        server web1 web.default.svc.cluster.local:80 check
+        server web2 web.default.svc.cluster.local:80 check
