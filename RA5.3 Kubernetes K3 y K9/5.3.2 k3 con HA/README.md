@@ -58,8 +58,36 @@ kubectl version --client
 ```
 
 ---
+## Paso 4: Instalación de kubectl
 
-## Paso 4: Desplegar Nginx con 2 réplicas
+###  Paso 1: Descargar el binario oficial
+
+```bash
+curl -LO "https://dl.k8s.io/release/$(curl -sL https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
+
+### Paso 2: Hacerlo ejecutable
+
+```bash
+chmod +x kubectl
+```
+
+### Paso 3: Moverlo a una ubicación del sistema
+
+```bash
+sudo mv kubectl /usr/local/bin/
+```
+
+### Paso 4: Verificar instalación
+
+```bash
+kubectl version --client
+```
+
+Esto instalará la última versión estable de kubectl y lo dejará listo para su uso.
+
+---
+## Paso 5: Desplegar Nginx con 2 réplicas
 
 Crear archivo de despliegue:
 nginx-deployment.yaml
@@ -100,7 +128,7 @@ kubectl get pods
 
 ---
 
-## Paso 5: Verificar con K9s
+## Paso 6: Verificar con K9s
 
 Lanzar K9s:
 
@@ -117,3 +145,15 @@ Puedes navegar entre los recursos y verificar que el deployment está en estado 
 - Verificamos los 3 nodos en el clúster con `kubectl get nodes`
 - Verificamos los 2 pods de nginx corriendo
 - Usamos K9s para monitorear el estado
+
+## Capturas
+
+![](./Imagenes/k3_cluster_ha.png)
+
+![](./Imagenes/instalacion_del_kbctl_y_nodes.png)
+
+![](./Imagenes/Deploy%20de%20los%20pods.png)
+
+![](./Imagenes/nodes_con_servers.png)
+
+![](./Imagenes/todos_los_servicios.png)
