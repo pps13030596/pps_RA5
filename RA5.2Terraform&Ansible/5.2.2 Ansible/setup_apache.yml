@@ -9,7 +9,8 @@
 
     - name: Actualizar el sistema
       apt:
-        upgrade: dist
+        upgrade: yes
+      ignore_errors: yes
 
     - name: Instalar Apache
       apt:
