@@ -1,0 +1,10 @@
+groups:
+- name: jenkins_alerts
+  rules:
+  - alert: PipelineFailed
+    expr: jenkins_job_last_build_result{job="jenkins",name="demo-pps"} == 1
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Pipeline demo-pps ha fallado"

@@ -1,0 +1,88 @@
+{
+  "id": null,
+  "title": "Jenkins Pipelines Overview",
+  "timezone": "browser",
+  "schemaVersion": 36,
+  "version": 1,
+  "refresh": "30s",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "\u00daltimo estado (demo-pps)",
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "jenkins_job_last_build_result{job=\"jenkins\",name=\"demo-pps\"}",
+          "legendFormat": "Estado"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "0": {
+                  "text": "\u2705 \u00c9xito"
+                },
+                "1": {
+                  "text": "\u274c Fallo"
+                },
+                "2": {
+                  "text": "\u23f9\ufe0f Abortado"
+                }
+              }
+            }
+          ],
+          "unit": "short"
+        }
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      }
+    },
+    {
+      "type": "stat",
+      "title": "Duraci\u00f3n \u00faltimo build (seg)",
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "jenkins_job_last_build_duration_seconds{job=\"jenkins\",name=\"demo-pps\"}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "decimals": 2
+        }
+      },
+      "gridPos": {
+        "x": 6,
+        "y": 0,
+        "w": 6,
+        "h": 4
+      }
+    },
+    {
+      "type": "graph",
+      "title": "Duraci\u00f3n builds (hist\u00f3rico)",
+      "datasource": "Prometheus",
+      "targets": [
+        {
+          "expr": "jenkins_job_last_build_duration_seconds{job=\"jenkins\",name=\"demo-pps\"}",
+          "legendFormat": "{{name}}",
+          "interval": ""
+        }
+      ],
+      "gridPos": {
+        "x": 0,
+        "y": 4,
+        "w": 12,
+        "h": 6
+      }
+    }
+  ]
+}
