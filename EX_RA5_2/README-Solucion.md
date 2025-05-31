@@ -62,3 +62,15 @@ Grafana:
 - Dashboard “Jenkins Pipelines Overview” importado manualmente.
 - Conectado a datasource Prometheus.
 - Paneles muestran datos del job demo-pps.
+
+Capturas:
+![](./Capturas/Captura%20desde%202025-05-31%2000-33-32.png)
+![](./Capturas/Captura%20desde%202025-05-31%2000-33-43.png)
+![](./Capturas/Captura%20desde%202025-05-31%2001-04-48.png)
+![](./Capturas/Captura%20desde%202025-05-31%2001-04-55.png)
+![](./Capturas/Captura%20desde%202025-05-31%2001-05-00.png)
+![](./Capturas/Captura%20desde%202025-05-31%2001-08-11.png)
+![](./Capturas/Captura%20desde%202025-05-31%2001-12-49.png)
+![](./Capturas/Captura%20desde%202025-05-31%2010-39-39.png)
+![](./Capturas/Captura%20desde%202025-05-31%2010-52-23.png)
+![](./Capturas/Captura%20desde%202025-05-31%2010-52-33.png)
