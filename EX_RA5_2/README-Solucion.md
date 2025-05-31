@@ -54,10 +54,6 @@ Integración con GitHub
 Verificaciones realizadas
 -------------------------------------------------------
 
-Jenkins:
-- Jenkins recibe los webhooks correctamente (Poked demo-pps).
-- Corregido error anterior con nombre mal escrito (demo-pss).
-
 Prometheus:
 - Scrapea métricas en /prometheus desde Jenkins.
 - Métricas visibles tras ejecutar el build al menos una vez.
@@ -66,11 +62,3 @@ Grafana:
 - Dashboard “Jenkins Pipelines Overview” importado manualmente.
 - Conectado a datasource Prometheus.
 - Paneles muestran datos del job demo-pps.
-
--------------------------------------------------------
-Siguientes pasos sugeridos
--------------------------------------------------------
-
-- Automatizar carga de dashboard y datasource en Grafana.
-- Añadir alertas por correo/Slack.
-- Asegurar acceso a Jenkins y Grafana con credenciales personalizadas.
