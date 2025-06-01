@@ -159,8 +159,14 @@ Token desde Vault: ****
 
 ## Capturas
 
-![]()
-![]()
-![]()
-![]()
-![]()
+![](./Imagenes/2025-06-01%2020_01_13-U24042-250222-PPS%20(Instantánea%201%20prehasicorp)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/2025-06-01%2020_01_24-U24042-250222-PPS%20(Instantánea%201%20prehasicorp)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/2025-06-01%2020_01_42-U24042-250222-PPS%20(Instantánea%201%20prehasicorp)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/2025-06-01%2020_02_26-U24042-250222-PPS%20(Instantánea%201%20prehasicorp)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/2025-06-01%2020_07_52-U24042-250222-PPS%20(Instantánea%201%20prehasicorp)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/2025-06-01%2020_19_04-U24042-250222-PPS%20(Instantánea%201%20prehasicorp)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/2025-06-01%2020_24_20-2025-06-01%2020_19_04-U24042-250222-PPS%20(Instantánea%201%20prehasicorp)%20[Corriendo]%20-%20.png)
+![](./Imagenes/2025-06-01%2020_24_29-U24042-250222-PPS%20(Instantánea%201%20prehasicorp)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/2025-06-01%2020_32_40-U24042-250222-PPS%20(Instantánea%201%20prehasicorp)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/2025-06-01%2020_33_34-U24042-250222-PPS%20(Instantánea%201%20prehasicorp)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
+![](./Imagenes/2025-06-01%2020_53_53-U24042-250222-PPS%20(Instantánea%201%20prehasicorp)%20[Corriendo]%20-%20Oracle%20VirtualBox.png)
