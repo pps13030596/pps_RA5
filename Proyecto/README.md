@@ -150,3 +150,4 @@ chown devops:devops /home/devops/.ssh
 ![](./Imagenes/2025-06-02%2021_51_13-pve%20-%20Proxmox%20Virtual%20Environment%20-%20Opera.png)
 ![](./Imagenes/2025-06-02%2021_51_38-pve%20-%20Proxmox%20Virtual%20Environment%20-%20Opera.png)
 ![](./Imagenes/2025-06-02%2021_54_07-pve%20-%20Proxmox%20Virtual%20Environment%20-%20Opera.png)
+
